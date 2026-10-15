@@ -1,0 +1,290 @@
+/* Estilos generales de la página */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 28px 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172b3a;
+    background: linear-gradient(#e6f7ff, #ffffff, #d9f2ff);
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Primera fila de testimonios */
+.fila-superior {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+/* Tarjeta del primer testimonio */
+.testimonio {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Burbuja del testimonio */
+.burbuja {
+    padding: 22px 24px;
+    border-radius: 22px;
+    position: relative;
+}
+
+/* Texto dentro de la burbuja */
+.burbuja p {
+    margin: 0 0 18px;
+    line-height: 1.45;
+    font-size: 17px;
+}
+
+.burbuja p:last-child {
+    margin-bottom: 0;
+}
+
+/* Burbuja oscura inspirada en la temática pirata */
+.oscura {
+    color: #fff;
+    background: #20252b;
+}
+
+/* Punta de la burbuja */
+.oscura::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 34px;
+    border-width: 13px 13px 0;
+    border-style: solid;
+    border-color: #20252b transparent transparent;
+}
+
+/* Tarjetas con borde */
+.tarjeta {
+    border: 2px solid #263746;
+    border-radius: 24px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.92);
+}
+
+/* Segunda tarjeta de la primera fila */
+.borde {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+/* Texto de los testimonios */
+.texto-cita {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Información de la persona */
+.persona {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Foto pequeña de la persona */
+.persona img {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e7b52c;
+}
+
+/* Nombre de la persona */
+.persona h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 4px;
+    color: #183b56;
+}
+
+/* Cargo de la persona */
+.persona p {
+    margin: 0;
+    font-size: 14px;
+    color: #526779;
+}
+
+/* Segunda fila */
+.fila-central {
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+    gap: 18px;
+    align-items: stretch;
+}
+
+/* Fotografía grande */
+.foto-grande {
+    width: 100%;
+    height: 100%;
+    min-height: 270px;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 3px solid #e7b52c;
+}
+
+/* Tarjeta destacada oscura */
+.destacada {
+    color: #fff;
+    background: linear-gradient(135deg, #172b3a, #263746);
+    border: 2px solid #e7b52c;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estrellas de valoración */
+.estrellas {
+    color: #ffc928;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+/* Nombre de la persona destacada */
+.destacada h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 6px;
+    color: #fff;
+}
+
+/* Cargo de la persona destacada */
+.cargo {
+    color: #a9c5d8;
+    font-size: 16px;
+    margin: 0 0 18px;
+}
+
+/* Texto de la tarjeta destacada */
+.destacada .texto-cita {
+    font-size: 17px;
+}
+
+/* Tercera fila */
+.carrusel {
+    text-align: center;
+    padding: 34px 28px 30px;
+    border-color: #263746;
+}
+
+/* Testimonio centrado */
+.cita-final {
+    max-width: 780px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+/* Controles y fotografías pequeñas */
+.controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Botones para cambiar de testimonio */
+.controles button {
+    border: none;
+    background: transparent;
+    font-size: 32px;
+    cursor: pointer;
+    color: #c62828;
+    padding: 0 4px;
+}
+
+/* Avatares del carrusel */
+.avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e7b52c;
+}
+
+/* Avatares secundarios */
+.tenue {
+    opacity: 0.45;
+}
+
+/* Nombre debajo de los avatares */
+.nombre-final {
+    margin: 16px 0 0;
+    font-size: 17px;
+    font-weight: bold;
+    color: #183b56;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 700px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    .fila-superior,
+    .fila-central {
+        grid-template-columns: 1fr;
+    }
+
+    .fila-superior {
+        gap: 22px;
+    }
+
+    .fila-central {
+        gap: 18px;
+    }
+
+    .foto-grande {
+        height: 280px;
+    }
+
+    .tarjeta {
+        padding: 22px;
+    }
+
+    .destacada h2 {
+        font-size: 25px;
+    }
+
+    .carrusel {
+        padding: 28px 16px;
+    }
+
+    .controles {
+        gap: 13px;
+    }
+
+    .avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .texto-cita,
+    .burbuja p,
+    .cita-final {
+        font-size: 15px;
+    }
+}
